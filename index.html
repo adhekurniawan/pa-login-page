@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="">
+	<title>PA - Login</title>
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Style -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	<!-- Custom Google Web Font -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+	<script src="js/modernizr-2.8.3.min.js"></script>  
+</head>
+<body>
+
+	<div id="right" class="col-md-6 col-sm-6 nopadding"><!-- #Right -->
+		<div class="right-section">
+			<div class="logo-small">
+				<img src="img/logo.png"> Smart Neighbourhood
+			</div>
+		</div>
+	</div><!-- / #Right -->
+	<div id="left" class="col-md-6 col-sm-6 nopadding"><!--  #Left -->
+		<div class="left-section"><!-- .Left-section -->
+			<div class="login-area"><!-- .Login-area -->
+				<div class="logo-big text-center"><img src="img/logo.png"></div>
+				<h2 class="subtitle">Merchant Login</h2>
+				<div class="form-area"><!-- .Form-area -->
+					<form id="login">
+						<div class="form-group">
+							<input name="" type="email" class="form-control" placeholder="Nama Akun / Alamat Email" />
+						</div>
+						<div class="form-group">
+							<input name="" type="password" class="form-control" placeholder="Password" id="pwd" />
+							<i class="fa fa-eye active" aria-hidden="true" id="eye"></i>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<a href=""><p class="text-left">Lupa Password ?</p></a>
+							</div>
+							<div class="col-md-6 col-xs-6">
+								<a href="" class="btn btn-submit">Masuk</a>
+							</div>
+						</div>
+					</form>
+					<a href=""><p class="text-footer text-center">Belum punya akun? Daftar di sini</p></a>
+				</div><!-- / .Form-area -->
+			</div><!-- / .Login-area -->
+		</div><!-- .Left-section -->
+	</div><!-- / #Left -->
+
+
+
+	<!-- JavaScript -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!-- JavaScript HIDDEN -->
+	<script type="text/javascript">
+		function show() {
+			var p = document.getElementById('pwd');
+			p.setAttribute('type', 'text');
+		}
+
+		function hide() {
+			var p = document.getElementById('pwd');
+			p.setAttribute('type', 'password');
+		}
+
+		var pwShown = 0;
+
+		document.getElementById("eye").addEventListener("click", function () {
+			if (pwShown == 0) {
+				pwShown = 1;
+				show();
+			} else {
+				pwShown = 0;
+				hide();
+			}
+		}, false);
+	</script>
+	<script>
+		$('i').click(function(){
+			$(this).toggleClass('active');
+		});
+	</script>
+	<!-- / JavaScript -->
+
+</body>
+</html>
